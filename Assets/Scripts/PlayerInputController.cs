@@ -8,7 +8,7 @@ public class PlayerInputController : MonoBehaviour
     MainMenuManager sceneChanger;
 
     bool inShop = false;
-
+    bool inBubbles = false;
     void Awake()
     {
         sceneChanger = GetComponent<MainMenuManager>();
@@ -22,8 +22,14 @@ public class PlayerInputController : MonoBehaviour
         if(Input.GetKeyDown(KeyCode.E) && inShop == true)
         {
             //Debug.Log("EnteringShop");
-           sceneChanger.ChangeScene("Shop");
+            sceneChanger.ChangeScene("Shop");
         }
+        if(Input.GetKeyDown(KeyCode.E) && inBubbles == true)
+        {
+            //Debug.Log("EnteringShop");
+            sceneChanger.ChangeScene("Ocean");
+        }
+        
     }
     void FixedUpdate()
     {
@@ -52,14 +58,22 @@ public class PlayerInputController : MonoBehaviour
     {
         if(other.tag == "Shop")
         {
-        inShop = true;
+            inShop = true;
+        }
+        else if(other.tag == "toOcean")
+        {
+            inBubbles = true;
         }
     }
     void OnTriggerExit2D(Collider2D other) 
     {
         if(other.tag == "Shop")
         {
-        inShop = false;
+            inShop = false;
+        }
+        else if(other.tag == "toOcean")
+        {
+            inBubbles = false;
         }
     }
 }

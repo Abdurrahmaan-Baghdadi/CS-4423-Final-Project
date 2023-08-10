@@ -6,7 +6,8 @@ using UnityEngine;
 public class NewBehaviourScript : MonoBehaviour
 {
     Text text;
-    public Character player;
+    [SerializeField]
+    private ScriptableCurrency RolosCurrency;
     
     void Awake()
     {
@@ -16,12 +17,12 @@ public class NewBehaviourScript : MonoBehaviour
     
     void Start()
     {
-        player = Character.character;
+        
     }
 
     void Update() 
     {
-        text.text = player.RoyalReef.ToString();
+        text.text = RolosCurrency.RoyalReef.ToString();
     }
 }
 

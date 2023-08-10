@@ -6,7 +6,8 @@ using UnityEngine;
 public class SeafoamShard : MonoBehaviour
 {
     Text text;
-    public Character player;
+    [SerializeField]
+    private ScriptableCurrency RolosCurrency;
     
     void Awake()
     {
@@ -16,12 +17,12 @@ public class SeafoamShard : MonoBehaviour
     
     void Start()
     {
-        player = Character.character;
+        
     }
 
     void Update() 
     {
-        text.text = player.SeafoamShard.ToString();
+        text.text = RolosCurrency.SeafoamShard.ToString();
     }
 }
 

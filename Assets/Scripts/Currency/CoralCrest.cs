@@ -6,7 +6,8 @@ using UnityEngine;
 public class CoralCrest : MonoBehaviour
 {
     Text text;
-    public Character player;
+    [SerializeField]
+    private ScriptableCurrency RolosCurrency;
     
     void Awake()
     {
@@ -16,12 +17,12 @@ public class CoralCrest : MonoBehaviour
     
     void Start()
     {
-        player = Character.character;
+        
     }
 
     void Update() 
     {
-        text.text = player.CoralCrest.ToString();
+        text.text = RolosCurrency.CoralCrest.ToString();
     }
 }
 

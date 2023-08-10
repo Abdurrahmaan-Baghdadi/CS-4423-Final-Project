@@ -6,6 +6,18 @@ TagManager:
   tags:
   - InteractingPlayer
   - Shop
+  - toOcean
+  - Dungeon
+  - FishingSpot
+  - WayToAnumari
+  - Sahuagin
+  - FishingFloat
+  - Projectile
+  - SwingAttack
+  - TinyTritonTear
+  - CoralCrest
+  - SeafoamShard
+  - RoyalReef
   layers:
   - Default
   - TransparentFX

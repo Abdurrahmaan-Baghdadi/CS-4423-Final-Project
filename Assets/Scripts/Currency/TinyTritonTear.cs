@@ -6,7 +6,8 @@ using UnityEngine;
 public class TinyTritonTear : MonoBehaviour
 {
     Text text;
-    public Character player;
+    [SerializeField]
+    private ScriptableCurrency RolosCurrency;
     
     void Awake()
     {
@@ -16,11 +17,11 @@ public class TinyTritonTear : MonoBehaviour
     
     void Start()
     {
-        player = Character.character;
+        
     }
 
     void Update() 
     {
-        text.text = player.TinyTritonTear.ToString();
+        text.text = RolosCurrency.TinyTritonTear.ToString();
     }
 }
